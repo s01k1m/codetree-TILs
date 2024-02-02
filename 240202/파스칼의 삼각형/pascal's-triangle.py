@@ -5,10 +5,8 @@ arr = [
 ]
 
 arr[0][0] = 1
-arr[1][0] = 1
-arr[1][1] = 1
 
-for row in range(2, n):
+for row in range(1, n):
     for col in range(n):
         arr[row][col] =arr[row-1][col-1] + arr[row-1][col]
 
