@@ -8,10 +8,15 @@ arr = [
 ]
 n = 1
 
-for j in range(0, col): # 3 -> 0 1 2  
-    for i in range(0, j+1): # 0 / 1 0 / 2 1 0 /
-        arr[i][j-i] = n # 1 2 2 1 / 2 2 
-        n += 1
+for start_col in range(0, col):
+    curr_col = start_col
+    curr_row = 0
+
+    while 0 <= curr_col < col and 0 <= curr_row < row:
+        arr[curr_row][curr_col] = n
+        n+=1
+        curr_row += 1
+        curr_col -= 1
 
 # for j in range(1, col): # 1 2
 #     for i in range(col-1, j-1, -1): # 1-> 1 2 2-> 2 
