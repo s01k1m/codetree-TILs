@@ -1,14 +1,15 @@
 n, m =map(int, input().split())
 
-x = int(min(n, m)**(1/2))
 
-greatestCommoDivision = 0
-for i in range(1, x+1):
-    if n % i == 0 and m % i == 0:
-        greatestCommoDivision = i
-        # print(i)
-    
-if n == m :
-    greatestCommoDivision = n
-    
-print(greatestCommoDivision)
+
+def gcd(a, b):
+    if a % b == 0:
+        return b
+    else:
+        # print(b, a%b)
+        return gcd(b, a%b)
+
+greatestCommonDivision = gcd(n,m)
+gcd(n,m)
+
+print(greatestCommonDivision)
