@@ -8,5 +8,7 @@ for i in range(1, x+1):
         greatestCommoDivision = i
         # print(i)
     
-
+if n == m :
+    greatestCommoDivision = n
+    
 print(greatestCommoDivision)
