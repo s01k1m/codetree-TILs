@@ -13,7 +13,7 @@ def consecutive(array1, array2):
         if j == len(array2):
             answer = 1
             break
-        if i > len(array1):
+        if i == len(array1):
             break
     return answer
 
