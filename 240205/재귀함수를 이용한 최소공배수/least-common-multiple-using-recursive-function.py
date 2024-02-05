@@ -1,7 +1,7 @@
 def lcd(n):
     if n == 1 :
         return arr[1] * arr[0] / gcd(arr[0], arr[1])
-    return arr[n] * lcd(n-1) / gcd(lcd(n-1), arr[n])
+    return arr[n] * lcd(n-1) / gcd(arr[n], lcd(n-1))
 
 n = int(input())
 arr = list(map(int, input().split()))
