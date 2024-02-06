@@ -13,5 +13,5 @@ arr = []
 for i in range(n):
     arr.append(original[i])
 
-    if original[i] % 2:
+    if (i+1) % 2:
         median(arr)
