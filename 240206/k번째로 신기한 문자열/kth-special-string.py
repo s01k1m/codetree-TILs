@@ -9,12 +9,13 @@ for i in range(n):
 arr.sort()
 
 x = 0
+l = len(T)
 
 for i in range(n):
 
     str = arr[i]
 
-    if str[:2] == T:
+    if str[:l] == T:
         x += 1
         if x == k:
             print(arr[i])
