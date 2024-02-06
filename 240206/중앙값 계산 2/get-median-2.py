@@ -7,7 +7,7 @@ def median(arr):
 
 n = int(input())
 original = list(map(int, input().split()))
-original.sort() # for ascending order
+
 arr = []
 
 for i in range(n):
