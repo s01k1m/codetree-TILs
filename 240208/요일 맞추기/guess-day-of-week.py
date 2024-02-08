@@ -7,12 +7,13 @@ elapsed_days = 0
 
 
 if (m1 == m2 and d1 > d2) or (m1 > m2): # 기준일 달인데 그 전날
+
     while True:
         if m1 == m2 and d1 == d2:
             break
         
         d1 -= 1
-        elapsed_days += 1
+        elapsed_days -= 1
 
         if d1 < 1:
             m1 -= 1
