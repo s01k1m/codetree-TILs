@@ -1,6 +1,6 @@
 m1, d1, m2, d2 = map(int, input().split())
 
-days_of_month = [0, 31, 30, 31, 30, 31, 30, 31, 31, 30 ,31, 30, 31 ]
+days_of_month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30 ,31, 30, 31]
 days = ['Mon', "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 elapsed_days = 0
 
