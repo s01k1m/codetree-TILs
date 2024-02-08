@@ -3,8 +3,10 @@ x = y = z = 11
 elapsed_min = 0
 
 if a <= 11:
-    if b <= 11 or c <= 11:
+    if b < 11 or c < 11:
         print(-1)
+    elif b == 11 and c==11:
+        print(0)
 else:
 
     while True:
