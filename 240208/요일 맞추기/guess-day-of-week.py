@@ -17,7 +17,7 @@ if (m1 == m2 and d1 > d2) or (m1 > m2): # 기준일 달인데 그 전날
 
         if d1 < 1:
             m1 -= 1
-            d1 = 1
+            d1 = days_of_month[m1]
 
 elif m1 <= m2: # 기준일 같거나 그후
     while True:
