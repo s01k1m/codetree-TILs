@@ -1,5 +1,5 @@
 a, b = map(int, input().split())
-n =input()
+n = input()
 
 n = list(map(int, list(n)))
 
@@ -18,5 +18,5 @@ while True:
     n_based_B.append(origin_n % b)
     origin_n = origin_n // b
 
-for i in n_based_B:
+for i in n_based_B[::-1]:
     print(i, end="")
