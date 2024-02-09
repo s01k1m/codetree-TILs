@@ -1,38 +1,37 @@
+OFFSET = 1000
+MAX_R = 2000
+
+# 변수 선언 및 입력
 n = int(input())
+segments = [
+    tuple(input().split())
+    for _ in range(n)
+]
 
-global history
-history = {} # 딕셔너리에 {장소 : 방문횟수}를 저장할거임
-
-def visit(x):
-    try: 
-        n = history[x] + 1
-        history[x] = n
-    except KeyError: # 딕셔너리에 장소를 키로 조회했을때 없으면 에러나서 에러 처리해줘야됨.
-        history[x] = 1
-
-cur = 0
-
-for _ in range(n):
-    move, direction = input().split()
+checked = [0] * (MAX_R + 1)
+cur = 1000
+for move, direction in segments:
     move = int(move)
-
+    # 구간을 칠해줍니다.
+    # 구간 단위로 진행하는 문제이므로
+    # next에 +1가 들어가지 않음에 유의합니다.
     if direction == "R":
         next = cur + move
         for i in range(cur, next):
-            visit(i)
-        
+            checked[i] += 1
         cur = next
 
     elif direction == "L":
         next = cur - move
-        for i in range(cur, next, -1):
-            visit(i)
-
+        for i in range(next, cur):
+            checked[(i)] += 1
         cur = next
 
+# 2번 이상 지나간 영역의 크기
+
 answer = 0
-for key, value in history.items():
-    if value > 1:
+for i in checked:
+    if i >= 2:
         answer += 1
 
 print(answer)
