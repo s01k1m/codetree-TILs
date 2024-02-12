@@ -4,7 +4,7 @@ arr= [[0]*201 for _ in range(201)]
 
 def square(a, b):
     for x in range(a, (a-8), -1):
-        for y in range(b, (a+8)):
+        for y in range(b, (b-8), -1):
             arr[x][y] = 1
 
 
