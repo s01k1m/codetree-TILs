@@ -1,4 +1,4 @@
-max = 50000
+max = 1000000
 arr_A = [0] * (max+1)
 arr_B = [0] * (max+1)
 a, b = map(int, input().split())
