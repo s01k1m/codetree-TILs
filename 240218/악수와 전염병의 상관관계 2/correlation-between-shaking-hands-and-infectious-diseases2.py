@@ -31,7 +31,7 @@ for (t, x, y) in shake_record:
             # 횟수 차감
             remaining_number_of_infection[y] -= 1
             # 새로운 감염
-            arr[y] = True
+            arr[x] = True
             remaining_number_of_infection[x] = limit
         elif arr[x] == True: # 감염자 끼리의 만남
             remaining_number_of_infection[x] -= 1 # 횟수만 차감
