@@ -24,6 +24,7 @@ for (t, x, y) in shake_record:
 
         elif arr[y] == True: # 감염자 끼리의 만남
             remaining_number_of_infection[x] -= 1 # 횟수만 차감
+            remaining_number_of_infection[y] -= 1
 
     elif remaining_number_of_infection[y] > 0:
         if arr[x] == False:
@@ -33,8 +34,9 @@ for (t, x, y) in shake_record:
             arr[y] = True
             remaining_number_of_infection[x] = 3
         elif arr[x] == True: # 감염자 끼리의 만남
+            remaining_number_of_infection[x] -= 1 # 횟수만 차감
             remaining_number_of_infection[y] -= 1
-
+            
 for i in range(1, everyone + 1):
     if arr[i]:
         print(1, end= "")
