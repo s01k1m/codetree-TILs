@@ -15,6 +15,11 @@ for i in range(a):
         for j in range(step):
             arr_A[n] = arr_A[n-1] - 1
             n += 1
+    
+    if i == a-1: # 멈추고 난 시간 이후 기록
+        for j in range(n, 50001):
+            arr_A[j] = arr_A[n-1]
+
 
 for i in range(b):
     step, direction = input().split()
@@ -27,6 +32,11 @@ for i in range(b):
         for j in range(step):
             arr_B[n] = arr_B[n-1] - 1
             n += 1
+    
+    if i == a-1: # 멈추고 난 시간 이후 기록
+        for j in range(n, 50001):
+            arr_B[j] = arr_B[n-1]
+
 ans = 0
 for i in range(1, 50001):
     if (arr_A[i] != arr_A[i-1] or arr_B[i] != arr_B[i-1]) and arr_A[i] == arr_B[i]:
