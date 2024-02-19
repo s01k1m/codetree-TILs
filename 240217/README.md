@@ -4,16 +4,16 @@
 24년 02월 17일 목표(50px)까지 20px 남았습니다.
 
 ![30xp](https://img.shields.io/badge/EXP-30xp-%235cb85c.svg?for-the-badge)
-![0일째](https://img.shields.io/badge/연속학습-0일째-%23E34F26.svg?for-the-badge)
+![16일째](https://img.shields.io/badge/연속학습-16일째-%23E34F26.svg?for-the-badge)
 
 |총 문제수|획득 경험치|연속 학습|
 |---:|---:|---|
-2|30xp|0일째❄️|
+2|30xp|16일째🔥|
 
 |교재|이름|난이도|상태|최근 제출 코드|
 |---|---|:---:|:---:|---|
 |[Novice Mid / 시뮬레이션 II / 배열 기록](https://www.codetree.ai/missions?missionId=5)|[[연습]선두를 지켜라](https://www.codetree.ai/missions/5/problems/keep-the-lead)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/s01k1m/codetree-TILs/blob/main/240217/%EC%84%A0%EB%91%90%EB%A5%BC%20%EC%A7%80%EC%BC%9C%EB%9D%BC/keep-the-lead.py)|
-|[Novice Mid / 시뮬레이션 II / 배열 기록](https://www.codetree.ai/missions?missionId=5)|[[연습]좌우로 움직이는 로봇](https://www.codetree.ai/missions/5/problems/robot-moving-from-side-to-side)|![보통][medium]|![Failed][failed]|[링크](https://github.com/s01k1m/codetree-TILs/blob/main/240217/%EC%A2%8C%EC%9A%B0%EB%A1%9C%20%EC%9B%80%EC%A7%81%EC%9D%B4%EB%8A%94%20%EB%A1%9C%EB%B4%87/robot-moving-from-side-to-side.py)|
+|[Novice Mid / 시뮬레이션 II / 배열 기록](https://www.codetree.ai/missions?missionId=5)|[[연습]좌우로 움직이는 로봇](https://www.codetree.ai/missions/5/problems/robot-moving-from-side-to-side)|![보통][medium]|![Passed][passed]|[링크](https://github.com/s01k1m/codetree-TILs/blob/main/240217/%EC%A2%8C%EC%9A%B0%EB%A1%9C%20%EC%9B%80%EC%A7%81%EC%9D%B4%EB%8A%94%20%EB%A1%9C%EB%B4%87/robot-moving-from-side-to-side.py)|
 
 
 * 획득 경험치: 해설을 보지 않고 푼 문제에 한해 최초 1회 경험치를 획득하실 수 있습니다.
