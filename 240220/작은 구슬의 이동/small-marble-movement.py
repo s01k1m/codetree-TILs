@@ -27,16 +27,15 @@ cur_d = directs[d]
 while t > 0:    
     n_x = cur_x + dx[cur_d]
     n_y = cur_y + dy[cur_d]
-
     if in_range(n_x, n_y):
-        t -= 1
+        
         cur_x = n_x
         cur_y = n_y
 
     else:
-        cur_d -= 3
-        cur_d %= 4
-
+        cur_d = 3- cur_d
+        # cur_d %= 4
+    t -= 1
             
-        t -= 1
+    
 print(cur_x+1, cur_y+1)
