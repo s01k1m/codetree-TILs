@@ -4,16 +4,16 @@
 24년 02월 12일 목표(50px)까지 20px 남았습니다.
 
 ![30xp](https://img.shields.io/badge/EXP-30xp-%235cb85c.svg?for-the-badge)
-![0일째](https://img.shields.io/badge/연속학습-0일째-%23E34F26.svg?for-the-badge)
+![11일째](https://img.shields.io/badge/연속학습-11일째-%23E34F26.svg?for-the-badge)
 
 |총 문제수|획득 경험치|연속 학습|
 |---:|---:|---|
-2|30xp|0일째❄️|
+2|30xp|11일째🔥|
 
 |교재|이름|난이도|상태|최근 제출 코드|
 |---|---|:---:|:---:|---|
 |[Novice Mid / 시뮬레이션 I / 사각형 칠하기](https://www.codetree.ai/missions?missionId=5)|[[개념]겹치지 않는 사각형의 넓이](https://www.codetree.ai/missions/5/problems/area-of-non-overlapping-rectangle)|![보통][medium]|![Passed][passed]|[링크](https://github.com/s01k1m/codetree-TILs/blob/main/240212/%EA%B2%B9%EC%B9%98%EC%A7%80%20%EC%95%8A%EB%8A%94%20%EC%82%AC%EA%B0%81%ED%98%95%EC%9D%98%20%EB%84%93%EC%9D%B4/area-of-non-overlapping-rectangle.py)|
-|[Novice Mid / 시뮬레이션 I / 사각형 칠하기](https://www.codetree.ai/missions?missionId=5)|[[연습]색종이의 총 넓이](https://www.codetree.ai/missions/5/problems/the-total-area-of-colored-paper.)|![쉬움][easy]|![Failed][failed]|[링크](https://github.com/s01k1m/codetree-TILs/blob/main/240212/%EC%83%89%EC%A2%85%EC%9D%B4%EC%9D%98%20%EC%B4%9D%20%EB%84%93%EC%9D%B4/the-total-area-of-colored-paper..py)|
+|[Novice Mid / 시뮬레이션 I / 사각형 칠하기](https://www.codetree.ai/missions?missionId=5)|[[연습]색종이의 총 넓이](https://www.codetree.ai/missions/5/problems/the-total-area-of-colored-paper.)|![쉬움][easy]|![Passed][passed]|[링크](https://github.com/s01k1m/codetree-TILs/blob/main/240212/%EC%83%89%EC%A2%85%EC%9D%B4%EC%9D%98%20%EC%B4%9D%20%EB%84%93%EC%9D%B4/the-total-area-of-colored-paper..py)|
 
 
 * 획득 경험치: 해설을 보지 않고 푼 문제에 한해 최초 1회 경험치를 획득하실 수 있습니다.
