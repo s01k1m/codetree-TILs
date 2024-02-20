@@ -31,5 +31,7 @@ for _ in range(n):
 
     if x == 0 and y == 0:
         break
-
-print(time)
+if x != 0 or y != 0:
+        print(-1)
+else:
+    print(time)
