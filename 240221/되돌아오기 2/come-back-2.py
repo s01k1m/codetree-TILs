@@ -20,7 +20,10 @@ for _ in arr:
     elif _ == "R":
         time += 1
         direct = (direct + 1) % 4
-    
+    elif _ == "L":
+        time += 1
+        direct = (direct - 1) % 4
+
     if x == 0 and y == 0:
         break
 
