@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 ans = 0
 
 for i in range(n):
-    cnt =1
+    cnt = 1
     last = arr[i]
     for j in range(i+1, n):
         if last <= arr[j]:
@@ -17,4 +17,8 @@ for i in range(n):
                         ans += 1
                         cnt = 2
                         continue
+                cnt = 2
+        cnt = 1
+        last = arr[i]
+    cnt =1
 print(ans)
