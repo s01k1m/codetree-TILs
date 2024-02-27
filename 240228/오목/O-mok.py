@@ -20,27 +20,24 @@ for i in range(19):
             continue
 
         for v in range(4):
-            if white or black:
-                continue
-
             cnt = 1
-
+            x, y =i, j
             nx = i+di[v]
             ny = j+dj[v]
-
+                
             while in_range(nx,ny) and arr[nx][ny] == arr[i][j] and  arr[i][j] != 0:
+            # while True:
                 cnt += 1
                 if cnt == 3:
 
                     row = nx + 1
                     col = ny + 1
 
-                i = nx
-                j = ny
+                x = nx
+                y = ny
 
-                nx = i+di[v]
-                ny = j+dj[v]
-
+                nx = x+di[v]
+                ny = y+dj[v]
 
 
                 if cnt == 5 and arr[i][j] == 2:
