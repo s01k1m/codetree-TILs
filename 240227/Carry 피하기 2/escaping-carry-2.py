@@ -28,7 +28,7 @@ for i in range(n):
 
                 t /= 10
             
-            if t == 1 and flag:
+            if flag:
                 ans.append(int(arr[i])+int(arr[j])+int(arr[k]))
 
 if ans:
