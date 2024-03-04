@@ -24,7 +24,7 @@ for i in range(0, N+1-M):
 
     flag= True
 
-    for j in range(3):
+    for j in range(M):
         if a[j] != bea[j]:
             flag = False
     if flag:
