@@ -6,7 +6,7 @@ arr = list(map(int, input().split()))
 
 min_cost = sys.maxsize
 
-for i in range(N-T):
+for i in range(N-T+1):
     cost = 0
     new_arr = arr[i: i+T]
     
