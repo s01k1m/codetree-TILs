@@ -29,9 +29,9 @@ def ball(ans, guess):
 
     return b
 # 이때, ball은 숫자만 같아야하기 때문에 즉, 자릿수는 달라야하기 때문에 숫자와 자릿수가 모두 같은 strike를 빼줍니다!
-for i in range(3, 10):
-    for j in range(2, 10):
-        for k in range(4, 10):
+for i in range(1, 10):
+    for j in range(1, 10):
+        for k in range(1, 10):
             if (i == j or j== k or i == k):
                 continue
 
