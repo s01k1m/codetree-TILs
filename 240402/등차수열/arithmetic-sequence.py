@@ -1,5 +1,5 @@
 n = int(input())
-arr = map(int, input().split())
+arr = list(map(int, input().split()))
 MAX_A = 100
 ans = 0
 
