@@ -1,8 +1,9 @@
 n , m = map(int, input().split()) # n: 행렬 n by n , m = 금 1개 획득시 어닝
-arr = [ # 지도
+grid = [ # 지도
     list(map(int, input().split()))
     for _ in range(n)
 ]
+
 
 
 # 주어진 k에 대하여 마름모의 넓이를 반환합니다.
@@ -16,8 +17,9 @@ def get_num_of_gold(row, col, k):
         grid[i][j]
         for i in range(n)
         for j in range(n)
-        if abs(row-i) + abs(col-j) <= k
+        if abs(row - i) + abs(col - j) <= k
     ])
+
 
 max_gold = 0
 
