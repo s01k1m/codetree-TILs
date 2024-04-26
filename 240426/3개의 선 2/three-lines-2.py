@@ -10,7 +10,7 @@ arr.sort()
 
 def straing(number, array, cnt):
     global ans
-    global arr
+
     newArr = copy.deepcopy(array)
 
     if (len(newArr)== 0):
@@ -42,11 +42,10 @@ for i in range(0,10):
         for k in range(0,10):
             # (1, x) (x, 0) (x, 4)
 
-
             number = [i,j,k]
             straing(number, arr, 0)
 
-if arr:
+if arr == True:
     print(1)
 else:
     print(0)
