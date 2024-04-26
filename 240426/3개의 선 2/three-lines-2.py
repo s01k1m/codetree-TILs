@@ -1,51 +1,57 @@
 import copy
 
+ans = False
 
 N = int(input())
-arr = [
+original = [
     tuple(map(int, input().split()))
     for _ in range(N)
 ]
-arr.sort()
+original.sort()
 
 def straing(number, array, cnt):
     global ans
+    global N
+    global original
 
-    newArr = copy.deepcopy(array)
-
-    if (len(newArr)== 0):
+    if (sum(array) == N):
         ans = True
         return
     
     if cnt == 3:
+
         return
+
     else:
         a = number[cnt]
+        newArray=copy.deepcopy(array)
 
-        for idx, item in enumerate(newArr):
+        for idx, item in enumerate(original):
+            # print(f'x는 {a} == {item[0]}')
             if item[0] == a:
-                newArr.pop(idx)
-        
-        straing(number, newArr, cnt+1)
+                newArray[idx] = True
 
-        newArr = copy.deepcopy(arr)
-        for idx, item  in enumerate(newArr):
+        straing(number, newArray, cnt+1)
+
+        newArray=copy.deepcopy(array)
+        for idx, item  in enumerate(original):
+            # print(f'y는 {a} == {item[0]}')
             if item[1] == a:
-                newArr.pop(idx)
-        straing(number, newArr, cnt+1)
+                newArray[idx] = True
+
+        straing(number, newArray, cnt+1)
+        
 
 
-ans = False
-
-for i in range(0,10):
-    for j in range(0,10):
-        for k in range(0,10):
+for i in range(0,11):
+    for j in range(0,11):
+        for k in range(0,11):
             # (1, x) (x, 0) (x, 4)
 
             number = [i,j,k]
-            straing(number, arr, 0)
+            straing(number, [False] * N, 0)
 
-if arr == True:
+if ans == True:
     print(1)
 else:
     print(0)
