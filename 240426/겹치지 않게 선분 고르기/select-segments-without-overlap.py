@@ -11,7 +11,6 @@ newArr = [False] * n
 
 
 
-
 def is_seperated():
     global n
     # 겹치는 지 검사하기 전에 선분의 초기화
@@ -28,11 +27,10 @@ def is_seperated():
             end = arr[idx][1]
             if (before_end and before_start): # 맨 처음 선분이 아니라면
                 # 지금 선분의 시작과 끝
-                if (before_end >= end >= before_start ) or (before_start <= start <= before_end): # 이전 끝나는 위치랑 시작 위치 겹치거나
+                if (before_end >= end >= before_start ) or (before_start <= start <= before_end) or (start<= before_start): # 이전 끝나는 위치랑 시작 위치 겹치거나
                     flag = False
                     return flag
 
-            # print(newArr, before_start, start)
             before_start = start
             before_end = end
 
