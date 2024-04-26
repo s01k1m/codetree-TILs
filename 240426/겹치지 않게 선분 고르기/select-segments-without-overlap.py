@@ -1,8 +1,4 @@
 n = int(input())
-global l
-l = n
-
-global answer
 answer = 0
 
 arr = [
@@ -10,49 +6,58 @@ arr = [
     for _ in range(n)
 ]
 
-arr.sort(key=lambda x: x[1])
-newArr = [False] * l
+arr.sort(key=lambda x: (x[1],x[0]))
+newArr = [False] * n
 
 
 
 
-def is_seperated(array):
-
+def is_seperated():
+    global n
     # 겹치는 지 검사하기 전에 선분의 초기화
     before_start = 0
     before_end = 0
+    global arr
+    global newArr
 
     flag = True
 
-    for i in range(len(array)):
-        if array[i]: # 선분 포함시킬때 검사 시작
+    for idx in range(n):
+        if newArr[idx]: # 선분 포함시킬때 검사 시작
+            start = arr[idx][0]
+            end = arr[idx][1]
             if (before_end and before_start): # 맨 처음 선분이 아니라면
                 # 지금 선분의 시작과 끝
-                start = array[i][0]
-                end = array[i][1]
                 if (before_end >= end >= before_start ) or (before_start <= start <= before_end): # 이전 끝나는 위치랑 시작 위치 겹치거나
-                    flag= False
+                    flag = False
+                    return flag
 
-        return flag
+            # print(newArr, before_start, start)
+            before_start = start
+            before_end = end
 
-def find_max(newArr, cnt):
+    return flag
+
+def find_max(cnt):
+    global n
     global answer
-    if cnt == l:
-        if (is_seperated(newArr)):
+
+    if cnt == n:
+        if (is_seperated()):
             temp = sum(newArr)
             answer = max(answer, temp)
-            return # 종료 
+            return # 종료
+        return
 
 
-    newArr[cnt] = False
-    find_max(newArr, cnt+1)
+    find_max(cnt+1)
     newArr[cnt] = True
-    find_max(newArr, cnt+1)
+    find_max(cnt+1)
+    newArr[cnt] = False
 
 
 
-
-find_max(newArr, 0)
+find_max(0)
 
 
 print(answer)
