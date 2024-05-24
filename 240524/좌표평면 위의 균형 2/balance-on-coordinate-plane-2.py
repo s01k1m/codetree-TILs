@@ -6,24 +6,10 @@
 # 2사분면 a < x, b > y
 # 3사분면 a < x, b < y
 # 3사분면 a > x, b < y
-import sys
-
-
-def devide(i, j, tempx, tempy):
-    global quadrant1, quadrant2, quadrant3, quadrant4
-
-    if tempx > i and tempx > j:
-         quadrant1 += 1
-    elif tempx < i and tempx > j:
-         quadrant2 += 1
-    elif tempx < i and tempx < j:
-         quadrant3 += 1
-    elif tempx > i and tempx < j:
-         quadrant4 += 1
 
 def compare(a, b, c, d):
-    l = [a,b,c,d]
-    return max(l) - min(l)
+    l = [a, b, c, d]
+    return max(l)
 
 n = int(input())
 points = [
@@ -43,22 +29,28 @@ max_y = points[-1][1]
 
 
 init = 100
-ans = 0
+ans = 100
 
-for i in range (min_x, max_x + 1):
-    for j in range(min_y, max_y + 1):
+for i in range (0, max_x + 1, 2):
+    for j in range(0, max_y + 1, 2):
 
-        quadrant1 = 0
-        quadrant2 = 0
-        quadrant3 = 0
-        quadrant4 = 0 
+        segment = [0] * 5
 
-        for a, b in points:
-            devide(i, j, a, b)
+        for x, y in points:
+            # k번째 점이 몇사분면인지 확인하고 해당 위치의 segment를 1 증가시킵니다.
+            if x > i and y > j:
+                segment[1] += 1
+            elif x < i and y > j:
+                segment[2] += 1
+            elif x < i and y < j:
+                segment[3] += 1
+            else:
+                segment[4] += 1
 
-        temp = compare(quadrant1, quadrant2, quadrant3, quadrant4)
-        if init > temp:
-            init = temp
-            ans = max(quadrant1, quadrant2, quadrant3, quadrant4)
+        # x = i, y = j로 나눴을때의 m을 구합니다.
+        cur_m = max(segment)
+
+        ans = min(ans, cur_m)
+
 
 print(ans)
