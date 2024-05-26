@@ -42,8 +42,7 @@ for i in range(1, n): # 문자열 길이
                     jungbok_arr[i] = True
                     break
 
-        if jungbok_arr[i] == False:
-            if ans > i:
-                ans = i
-
-print(ans)
+for i in range(1, n+1):
+    if jungbok_arr[i] == False:
+        print(i)
+        break
