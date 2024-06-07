@@ -4,17 +4,21 @@ flag = True
 for char in arr:
     if char == "(" or char == "[":
         stack.append(char)
-        
+
     if char == ")":
-        last = stack.pop()
-        if last != "(":
+        if stack:
+            last = stack.pop()
+            if last != "(":
+                flag = False
+        else:
             flag = False
-
     elif char == "]":
-        last = stack.pop()
-        if last != "[":
-            flag = False
-
+        if stack:
+            last = stack.pop()
+            if last != "[":
+                flag = False
+        else:
+            flag =false
 if flag:
     print(1)
 else:
