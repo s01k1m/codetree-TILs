@@ -15,7 +15,7 @@ if c1 != c2:
     print(-1)
 
 else:
-    for i in range(len(char1)):
+    for i in range(1, len(char1)):
         isMatched(char1[i], char2[i])
 
     print(ans)
